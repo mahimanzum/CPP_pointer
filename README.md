@@ -7,4 +7,9 @@ in that case we can just update the addresses using pointer to pointer because t
 
 Valgrind is a tool for cpp that checks for memory leaks malloc calloc(Anytime one of these us used the programmar is responsible to free the memory). <br>
 
-Anything declared in the main function gives memory in the stack memory(Each line is also known as frame) which doesn't need to be freed. but heap memory which is allocated using the malloc library needs to be freed manually.
+Anything declared in the main function gives memory in the stack memory(Each line is also known as frame) which doesn't need to be freed. but heap memory which is allocated using the malloc library needs to be freed manually. <br>
+
+int main(){
+  char s[4]; //uses stack memory
+  char *s = malloc(4); //uses heap memory which is needed to be freed
+}
