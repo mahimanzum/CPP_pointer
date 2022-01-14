@@ -9,7 +9,18 @@ Valgrind is a tool for cpp that checks for memory leaks malloc calloc(Anytime on
 
 Anything declared in the main function gives memory in the stack memory(Each line is also known as frame) which doesn't need to be freed. but heap memory which is allocated using the malloc library needs to be freed manually. <br>
 
-int main(){ <br>
-  char s[4]; //uses stack memory <br>
-  char *s = malloc(4); //uses heap memory which is needed to be freed <br>
-} <br>
+```c
+int main(){ 
+  char s[4]; //uses stack memory 
+  char *s = malloc(4); //uses heap memory which is needed to be freed 
+} 
+```
+
+```c
+Typedef uint8_t BYTE
+int main() {
+  BYTE bytes[3];
+  fread(bytes, sizeof(BYTE), 3, file); //file is a file pointer
+  //from the first 3 bytes the type of the file can be known easily as this is the industry standard
+}
+```
