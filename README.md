@@ -20,7 +20,7 @@ int main(){
 Typedef uint8_t BYTE
 int main() {
   BYTE bytes[3];
-  fread(bytes, sizeof(BYTE), 3, file); //file is a file pointer
+  fread(bytes, sizeof(BYTE), 3, file); //file is a file pointer, bytes is also needed to be a pointer. so if i did BYTE bt than fread needs to get &bt
   //from the first 3 bytes the type of the file can be known easily as this is the industry standard
 }
 ```
